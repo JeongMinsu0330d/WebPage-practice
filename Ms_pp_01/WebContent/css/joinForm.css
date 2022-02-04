@@ -1,0 +1,73 @@
+@charset "UTF-8";
+
+*{
+  margin:0px;
+  padding:0px;
+}
+
+ul, li{
+  list-style:none;
+}
+a{
+  color:inherit; /*기본값으로 */
+  text-decoration: none;
+}
+/* 라이브러리 */
+.cell{
+  float:left;
+}
+.row::after{
+  clear:both;
+  content:"";
+  display:block;
+}
+/* style */
+
+
+.contain{
+  width: 500px;
+  height: 600px;
+  border: 2px solid gray;
+  border-radius: 30px;
+  background-color:#eee;
+  margin:20px auto;
+}
+.conTitle{
+  width:100%;
+  padding:20px;
+  box-sizing:border-box;
+  text-align: center;
+  font-size:30px;
+  font-weight: bold;
+  color:green;
+}
+
+.contain > .conInput{
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0 50px;
+}
+
+input{
+  font-size: 20px;
+  font-weight: bold;
+  margin: 5px;
+}
+.dBtn{
+  display: inline-block;
+  float:right;
+  font-size: 15px;
+  border-radius: 30%;
+  background-color: #44f;
+  color: skyblue;
+}
+
+.joinBtn{
+  display: block;
+  margin: 0 auto;
+  width: 50%;
+  border-radius: 30px;
+  padding: 5px;
+  background-color: skyblue;
+  
+}

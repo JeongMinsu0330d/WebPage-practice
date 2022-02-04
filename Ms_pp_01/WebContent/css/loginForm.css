@@ -1,0 +1,61 @@
+@charset "UTF-8";
+
+/*노멀라이징*/
+*{
+  margin:0px;
+  padding:0px;
+}
+
+ul, li{
+  list-style:none;
+}
+a{
+  color:inherit; /*기본값으로 */
+  text-decoration: none;
+  
+}
+/* 라이브러리 */
+.cell{
+  float:left;
+}
+.row::after{
+  clear:both;
+  content:"";
+  display:block;
+}
+
+/* styleSheet-custom*/
+.titleWrap{
+  margin: 0 auto;
+  width: 600px;
+  height: 200px;
+  text-align: center;
+   padding-top: 60px;
+  box-sizing: border-box;
+}
+.titleWrap .title{
+	font-weight: bold;
+  	font-size: 40px;
+    color: green;
+  
+}
+
+.loginFormWrap{
+  display: flex;
+  justify-content:center;
+  align-items: center;
+  margin: 0 auto;
+  width: 300px;
+  height: 200px;
+  background-color: rgba(55,55,55,0.1);
+  border-radius: 15px;
+}
+
+.loginBtn{
+	color: blue;
+}
+
+.loginFormWrap input{
+  margin: 5px 0;
+  
+}
