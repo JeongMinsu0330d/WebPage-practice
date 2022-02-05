@@ -69,7 +69,23 @@ public class memberDAO extends databaseUtil{
 	
 	/////////////////////////////////////////////////////////////////////////////////////////////////
 
-	// 기능 : 
+	// 기능 : 아이디 중복 확인
+	public boolean dupFunc(String id) {
+		
+		String query = "select id from `member` where id like ?";
+		try {
+				psmt = conn.prepareStatement(query);
+				psmt.setString(1, id);
+				rs = psmt.executeQuery();
+				if(rs.next()) {
+					return false;
+				}
+				
+			}catch(Exception e) {e.printStackTrace();}
+		
+		
+		return true;
+	}
 	
 	
 	/////////////////////////////////////////////////////////////////////////////////////////////////

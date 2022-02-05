@@ -22,7 +22,7 @@
 </div>
 
 <div class="loginFormWrap">
-  <form action="./loginProcess.jsp" method="post" >
+  <form action="./proc/loginProcess.jsp" method="post" >
     아이디 <br>
     <input type="text" name="user_id"><p>
     비밀번호<br>
