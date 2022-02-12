@@ -38,6 +38,7 @@
 <!--body-->
 <div class="con">
 <!-- 헤더정보 jsp:inclued로 정보 불러올 예정--> 
+
   <header class="header_topBar_box">
     <div class="titleWrap">
       <a href="#"><span class="title">MM_PP</span></a>
