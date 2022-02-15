@@ -25,6 +25,7 @@
   <form action="./proc/loginProcess.jsp" method="post" >
     아이디 <br>
     <input type="text" name="user_id"><p>
+    
     비밀번호<br>
     <input type="password" name="user_pwd">
     <br><input class="loginBtn" type="submit" value="로그인">

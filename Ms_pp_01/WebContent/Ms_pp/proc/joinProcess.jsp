@@ -1,9 +1,14 @@
+<%@page import="utils.JSFunction"%>
 <%@page import="membership.memberDAO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 
     
     <%
+	    request.setCharacterEncoding("UTF-8");
+	    response.setContentType("text/html; charset=UTF-8");
+    
+    
     	String uId = request.getParameter("uId");
     	String uPwd = request.getParameter("uPwd");
     	String uName = request.getParameter("uName");
@@ -18,12 +23,8 @@
     	boolean s = mdao.join(uId,uPwd,uName);
     	
     	if(s){
-    		%>
-    		<script>
-    		alert("회원가입 성공");
-    		</script>
-    <%
-    	response.sendRedirect("webMainPage.jsp");
+    		JSFunction.alertLocation("회원가입 성공", "../webMainPage.jsp", out);
+    		
     	}else{
     		%>
     		<script>

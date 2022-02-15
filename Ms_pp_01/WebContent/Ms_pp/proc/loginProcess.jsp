@@ -1,9 +1,13 @@
+<%@page import="utils.JSFunction"%>
 <%@page import="membership.memberDTO"%>
 <%@page import="membership.memberDAO"%>
 <%@page import="utils.databaseUtil"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%
+	request.setCharacterEncoding("UTF-8");
+	response.setContentType("text/html; charset=UTF-8");
+
 	int falseCount = 0; // 로그인 실패횟수
 	String user_id = request.getParameter("user_id");
 	String user_pwd = request.getParameter("user_pwd");
@@ -26,16 +30,11 @@
 		session.setAttribute("user_pwd", (String)mdto.getUser_pwd());
 		session.setAttribute("user_name", mdto.getUser_name());
 		
-		response.sendRedirect("webMainPage.jsp");
+		response.sendRedirect("../webMainPage.jsp");
 	
 	}else{
-		%>
-		<script>
-			alert("로그인 실패");
-		</script>		
-		<%
-		request.setAttribute("LoginErrMsg","로그인 오류입니다."+falseCount);
-		request.getRequestDispatcher("loginForm.jsp").forward(request, response);
+		
+		JSFunction.alertLocation("로그인 실패", "../loginForm.jsp", out);
 	}
 	
 	
